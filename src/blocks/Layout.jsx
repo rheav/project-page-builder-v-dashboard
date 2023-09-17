@@ -6,7 +6,7 @@ function Layout() {
 	return (
 		<div className="w-full">
 			<Header sectionTitle="Inicio" />
-			<main>
+			<main className="px-12 py-6">
 				<Outlet /> {/* This is where different content will be rendered */}
 			</main>
 		</div>
