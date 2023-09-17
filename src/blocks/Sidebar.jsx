@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
 import Logo from "../components/Logo";
 import SidebarItem from "../components/SidebarItem";
-import { RxDesktop, RxGlobe, RxCode, RxCaretLeft, RxPerson, RxLayers, RxBarChart, RxMixerHorizontal, RxExit } from "react-icons/rx";
+import { RxDesktop, RxGlobe, RxCode, RxCaretLeft, RxPerson, RxLayers, RxBarChart, RxMixerHorizontal, RxExit, RxDashboard } from "react-icons/rx";
 import UserAvatar from "../components/UserAvatar";
 import Tooltip from "../components/Tooltip";
 
@@ -35,7 +36,7 @@ function Sidebar() {
 	}, []);
 
 	return (
-		<main className={` ${openState ? "w-48 lg:w-64" : "w-14 lg:w-20"} h-screen m-0 py-3 px-1 flex flex-col items-center border-r border-slate-300 bg-blue-500 relative duration-300 ease-linear `}>
+		<main className={` ${openState ? "w-52 lg:w-72" : "w-16 lg:w-24"} h-screen m-0 py-3 px-1 flex flex-col items-center border-r border-slate-300 bg-blue-500 relative duration-300 ease-linear`}>
 			<button
 				onClick={handleToggleSidebar}
 				className={`w-7 h-7  absolute top-5 flex items-center justify-center rounded-full bg-white left-full -translate-x-1/2 border-2 border-blue-300 shadow-lg ${openState ? "" : "rotate-180"}`}
@@ -45,7 +46,11 @@ function Sidebar() {
 			<div className="mt-2 mb-8 mx-auto">
 				<Logo isOpen={openState} />
 			</div>
-			<SidebarItem isOpen={openState} itemTitle={"Páginas"}>
+			<SidebarItem isOpen={openState} itemTitle={"Visão Geral"} itemRoute="/">
+				<RxDashboard />
+				<Tooltip isOpen={openState} itemTitle={"Visão Geral"} />
+			</SidebarItem>
+			<SidebarItem isOpen={openState} itemTitle={"Páginas"} itemRoute="/paginas">
 				<RxDesktop />
 				<Tooltip isOpen={openState} itemTitle={"Páginas"} />
 			</SidebarItem>
