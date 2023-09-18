@@ -1,6 +1,5 @@
 import Card from "../components/Card";
 import CardWide from "../components/CardWide";
-import { RxThickArrowUp } from "react-icons/rx";
 
 const Overview = () => {
 	return (
@@ -25,10 +24,10 @@ const Overview = () => {
 					Tempo na pág.
 				</Card>
 				<Card
-					cardData="bom"
-					infoType=""
+					cardData="35.7%"
+					infoType="média"
 				>
-					Teste
+					Bounce (rejeição)
 				</Card>
 			</div>
 			<div className="grid grid-cols-4 gap-x-5 justify-items-center mt-5 mb-10 row-span-1">
@@ -38,6 +37,7 @@ const Overview = () => {
 						{ pagePosition: "2", pageTitle: "Pacote Photoshop Plus", pageAcessos: "16458" },
 						{ pagePosition: "3", pageTitle: "Vendas Atômicas", pageAcessos: "14458" },
 						{ pagePosition: "4", pageTitle: "Upsell - Método PlayMais", pageAcessos: "12458" },
+						{ pagePosition: "5", pageTitle: "VSL - Projeto Verão", pageAcessos: "11458" },
 					]}
 					infoType="últimas 24h"
 				>

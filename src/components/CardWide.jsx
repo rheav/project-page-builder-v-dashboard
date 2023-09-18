@@ -1,4 +1,5 @@
 import LiveDataDot from "../assists/LiveDataDot";
+import LineGraph from "../assists/LineGraph";
 import Table from "./Table";
 
 const CardWide = ({ children, infoType, cardData }) => {
@@ -9,7 +10,11 @@ const CardWide = ({ children, infoType, cardData }) => {
 					{children} <LiveDataDot />
 					<p className="text-sm font-normal text-gray-400">{infoType}</p>
 				</h2>
-				<Table cardData={cardData} />
+				<div className="grid grid-cols-2 gap-x-5">
+					<Table cardData={cardData} />
+
+					<LineGraph />
+				</div>
 			</div>
 		</div>
 	);
