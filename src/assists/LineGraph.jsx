@@ -40,7 +40,7 @@ const LineGraph = () => {
 		<Card>
 			<h2 className="text-2xl text-transparent font-bold bg-clip-text bg-gradient-to-r from-startCold to-endCold lowercase">Top #3 Páginas</h2>
 			<LineChart
-				className="mt-6"
+				className="max-h-40"
 				data={chartdata}
 				index="mês"
 				categories={["Método PlayMais", "Pacote Photoshop Plus", "Vendas Atômicas"]}

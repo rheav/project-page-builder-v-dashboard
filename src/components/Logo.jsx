@@ -2,7 +2,14 @@ function Logo({ isOpen }) {
 	return (
 		<div className="">
 			{isOpen ? (
-				<svg id="logo-87" width="120" height="30" viewBox="0 0 202 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<svg
+					id="logo-87"
+					width="120"
+					height="30"
+					viewBox="0 0 202 40"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
 					<path
 						className="ccustom"
 						fillRule="evenodd"
@@ -17,13 +24,21 @@ function Logo({ isOpen }) {
 						d="M10 1.47023e-06C10 1.31322 9.74135 2.61358 9.2388 3.82684C8.73625 5.04009 7.99966 6.14248 7.07107 7.07107C6.14249 7.99966 5.0401 8.73625 3.82684 9.2388C2.61358 9.74134 1.31322 10 6.15916e-06 10L5.72205e-06 20C2.62644 20 5.22716 19.4827 7.65368 18.4776C10.0802 17.4725 12.285 15.9993 14.1421 14.1421C15.9993 12.285 17.4725 10.0802 18.4776 7.65367C19.4827 5.22715 20 2.62643 20 -3.8147e-06L10 1.47023e-06Z"
 						fill="#fafafa"
 					></path>
-					<path className="ccustom" d="M125.619 14.4525H120.767V29.8648H125.619V14.4525Z" fill="#fafafa"></path>
+					<path
+						className="ccustom"
+						d="M125.619 14.4525H120.767V29.8648H125.619V14.4525Z"
+						fill="#fafafa"
+					></path>
 					<path
 						className="ccustom"
 						d="M121.307 11.5666C121.814 12.074 122.448 12.3277 123.209 12.3277C123.97 12.3277 124.594 12.074 125.08 11.5666C125.567 11.0381 125.81 10.4038 125.81 9.66385C125.81 8.90277 125.567 8.26849 125.08 7.76111C124.594 7.25369 123.97 7 123.209 7C122.448 7 121.814 7.25369 121.307 7.76111C120.82 8.26849 120.577 8.90277 120.577 9.66385C120.577 10.4038 120.82 11.0381 121.307 11.5666Z"
 						fill="#fafafa"
 					></path>
-					<path className="ccustom" d="M51.1562 29.8648V7.47568H56.1351V25.4885H66.0612V29.8648H51.1562Z" fill="#fafafa"></path>
+					<path
+						className="ccustom"
+						d="M51.1562 29.8648V7.47568H56.1351V25.4885H66.0612V29.8648H51.1562Z"
+						fill="#fafafa"
+					></path>
 					<path
 						className="ccustom"
 						fillRule="evenodd"
@@ -69,7 +84,14 @@ function Logo({ isOpen }) {
 					></path>
 				</svg>
 			) : (
-				<svg id="logo-86" width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<svg
+					id="logo-86"
+					width="30"
+					height="30"
+					viewBox="0 0 40 40"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
 					<path
 						className="ccustom"
 						fillRule="evenodd"
