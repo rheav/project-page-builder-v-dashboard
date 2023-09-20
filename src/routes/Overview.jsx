@@ -3,8 +3,8 @@ import CardWide from "../components/CardWide";
 
 const Overview = () => {
 	return (
-		<main className="h-full">
-			<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-5 justify-items-center row-span-1">
+		<section className="h-screen flex flex-col justify-center items-center px-10">
+			<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-5 justify-items-center row-span-1 w-full">
 				<Card cardData="178,901" infoType="total no mês">
 					Sessões
 				</Card>
@@ -18,7 +18,7 @@ const Overview = () => {
 					Bounce
 				</Card>
 			</div>
-			<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-5 justify-items-center row-span-1 mt-5 mb-10 ">
+			<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-5 justify-items-center row-span-1 mt-5 mb-10 w-full">
 				<CardWide
 					cardData={[
 						{ pagePosition: "1", pageTitle: "Método PlayMais", pageAcessos: "19458" },
@@ -34,11 +34,8 @@ const Overview = () => {
 				<Card cardData="99.6%" infoType="médio">
 					upTime
 				</Card>
-				<Card cardData="15.6%" infoType="média">
-					Conversão
-				</Card>
 			</div>
-		</main>
+		</section>
 	);
 };
 

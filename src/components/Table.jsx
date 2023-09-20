@@ -12,7 +12,7 @@ const Table = ({ cardData }) => {
 				{cardData.map((item, index) => (
 					<tr key={index}>
 						{/* Posição */}
-						<td className="text-center lg:text-lg font-bold text-blue-600">{item.pagePosition}</td>
+						<td className="text-center  lg:text-lg font-bold text-blue-600">{item.pagePosition}</td>
 
 						{/* Página */}
 						<td className="lg:text-lg text-gray-500 text-center">

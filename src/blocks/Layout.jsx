@@ -4,9 +4,9 @@ import Header from "../components/Header";
 
 function Layout() {
 	return (
-		<div className="w-full h-full">
-			<Header sectionTitle="Inicio" />
-			<main className="px-10 pt-5">
+		<div className="w-full">
+			<main className="">
+				<Header sectionTitle="Inicio" />
 				<Outlet /> {/* This is where different content will be rendered */}
 			</main>
 		</div>
