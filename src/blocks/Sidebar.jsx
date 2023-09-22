@@ -2,13 +2,29 @@
 import { useState, useEffect } from "react";
 import Logo from "../components/Logo";
 import SidebarItem from "../components/SidebarItem";
-import { RxDesktop, RxGlobe, RxCode, RxCaretLeft, RxPerson, RxLayers, RxBarChart, RxMixerHorizontal, RxExit, RxDashboard } from "react-icons/rx";
+import {
+	RxDesktop,
+	RxGlobe,
+	RxCode,
+	RxCaretLeft,
+	RxPerson,
+	RxLayers,
+	RxBarChart,
+	RxMixerHorizontal,
+	RxExit,
+	RxDashboard,
+} from "react-icons/rx";
 import UserAvatar from "../components/UserAvatar";
 import Tooltip from "../components/Tooltip";
 
 function Sidebar() {
 	const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 	const [openState, setOpenState] = useState(true);
+	const [page, setPage] = useState("Visão Geral");
+
+	function handleSetPage() {
+		setPage();
+	}
 
 	function handleToggleSidebar() {
 		const width = window.innerWidth;
@@ -43,11 +59,13 @@ function Sidebar() {
 		>
 			<button
 				onClick={handleToggleSidebar}
-				className={`w-7 h-7  absolute top-5 flex items-center justify-center rounded-full bg-white left-full -translate-x-1/2 border-2 border-blue-300 shadow-lg ${openState ? "" : "rotate-180"}`}
+				className={`w-7 h-7  absolute top-5 flex items-center justify-center rounded-full bg-white left-full -translate-x-1/2 border-2 border-blue-300 shadow-lg ${
+					openState ? "" : "rotate-180"
+				}`}
 			>
 				<RxCaretLeft className="w-4" />
 			</button>
-			<div className="mt-2 mb-8 mx-auto">
+			<div className="mx-auto mt-2 mb-8">
 				<Logo isOpen={openState} />
 			</div>
 			<SidebarItem isOpen={openState} itemTitle={"Visão Geral"} itemRoute="/">
@@ -74,7 +92,7 @@ function Sidebar() {
 				<RxBarChart />
 				<Tooltip isOpen={openState} itemTitle={"Analytics"} />
 			</SidebarItem>
-			<div className="absolute bottom-0 mb-4 px-1">
+			<div className="absolute bottom-0 px-1 mb-4">
 				<UserAvatar isOpen={openState} userName="Victor Rhea" />
 				<SidebarItem isOpen={openState} itemTitle={"Minha Conta"}>
 					<RxPerson />

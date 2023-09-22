@@ -7,6 +7,8 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Pages from "./routes/Pages.jsx";
 import Overview from "./routes/Overview.jsx";
+import PagesNew from "./routes/PagesNew.jsx";
+import FoldersNew from "./routes/FoldersNew.jsx";
 
 const router = createBrowserRouter([
 	{
@@ -23,6 +25,22 @@ const router = createBrowserRouter([
 		element: <App />,
 		children: [
 			{ key: "pages", index: true, element: <Pages /> }, // Nested route for "/paginas"
+		],
+	},
+	{
+		key: "3",
+		path: "/paginas/nova-pagina",
+		element: <App />,
+		children: [
+			{ key: "pages", index: true, element: <PagesNew /> }, // Nested route for "/paginas"
+		],
+	},
+	{
+		key: "3",
+		path: "/paginas/nova-pasta",
+		element: <App />,
+		children: [
+			{ key: "pages", index: true, element: <FoldersNew /> }, // Nested route for "/paginas"
 		],
 	},
 ]);
