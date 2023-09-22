@@ -6,7 +6,7 @@ function PageCard({ children, projectName, tag1, tag2, tag3, pageId, onDeletePag
 	}
 
 	return (
-		<div className="w-full overflow-hidden rounded shadow-lg">
+		<div className="max-w-sm overflow-hidden transition-all duration-300 border border-gray-300 rounded shadow-md hover:shadow-lg hover:-translate-y-2">
 			<img
 				className="w-full"
 				src="https://v1.tailwindcss.com/img/card-top.jpg"
@@ -14,9 +14,9 @@ function PageCard({ children, projectName, tag1, tag2, tag3, pageId, onDeletePag
 			/>
 			<div className="px-4 py-4">
 				<div className="mb-2 text-xl font-bold">{children}</div>
-				<p className="text-base text-gray-700">{projectName}</p>
+				<p className="text-base text-gray-600">{projectName}</p>
 			</div>
-			<div className="flex px-4 pt-4 pb-2">
+			<div className="flex px-4 pt-2 pb-2">
 				<div className="flex-grow">
 					<span className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-normal text-white bg-blue-500 rounded-full">
 						{tag1}

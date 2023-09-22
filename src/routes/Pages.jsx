@@ -88,7 +88,7 @@ const Pages = () => {
 						type="text"
 						name="name"
 						placeholder="busque sua página"
-						className="p-2 border border-gray-300 rounded-md"
+						className="p-2 placeholder-blue-300 border border-gray-300 rounded-md focus:border-blue-500"
 					/>
 				</div>
 
@@ -103,10 +103,10 @@ const Pages = () => {
 					<BtnOutline itemRoute="/paginas/nova-pasta">Criar pasta</BtnOutline>
 				</div>
 			</div>
-			<h2 className="px-10 my-4 font-bold text-transparent lg:text-2xl bg-clip-text bg-gradient-to-r from-startCold ">
+			<h2 className="px-10 my-2 font-bold text-transparent lg:text-2xl bg-clip-text bg-gradient-to-r from-startCold ">
 				Pastas
 			</h2>
-			<div className="flex w-full max-w-6xl gap-5 px-10 py-5">
+			<div className="flex w-full gap-5 px-10 py-5">
 				{folders.length > 0 ? (
 					<>
 						{folders.map((folder) => {
@@ -128,10 +128,10 @@ const Pages = () => {
 					</>
 				)}
 			</div>
-			<h2 className="px-10 my-4 font-bold text-transparent lg:text-2xl bg-clip-text bg-gradient-to-r from-startCold">
+			<h2 className="px-10 my-2 font-bold text-transparent lg:text-2xl bg-clip-text bg-gradient-to-r from-startCold">
 				Páginas
 			</h2>
-			<div className="flex w-full max-w-6xl gap-5 px-10 py-5">
+			<div className="flex w-full gap-5 px-10 py-5">
 				{pages.length > 0 ? (
 					<>
 						{pages.map((page) => {
