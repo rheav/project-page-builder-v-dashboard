@@ -6,7 +6,7 @@ function PageCard({ children, projectName, tag1, tag2, tag3, pageId, onDeletePag
 	}
 
 	return (
-		<div className="max-w-xs overflow-hidden transition-all duration-300 border border-gray-200 rounded-md shadow-md hover:shadow-lg hover:-translate-y-2">
+		<div className="max-w-xs overflow-hidden transition-all duration-200 border border-gray-200 rounded-md shadow-md hover:shadow-lg hover:-translate-y-2">
 			<img
 				className="w-full"
 				src="https://v1.tailwindcss.com/img/card-top.jpg"
@@ -31,7 +31,7 @@ function PageCard({ children, projectName, tag1, tag2, tag3, pageId, onDeletePag
 				<div>
 					<span
 						onClick={handleDeletePage}
-						className="flex flex-row p-1 text-xl transition-colors duration-300 ease-linear border border-gray-300 rounded-full cursor-pointer hover:bg-startCold/30"
+						className="flex flex-row p-1 text-xl transition-colors duration-200 ease-linear border border-gray-300 rounded-full cursor-pointer hover:bg-red-300"
 					>
 						<RxTrash />
 					</span>

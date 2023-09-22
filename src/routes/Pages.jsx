@@ -24,7 +24,7 @@ const foldersTest = [
 	},
 ];
 
-const pagesTest = [
+/* const pagesTest = [
 	{
 		id: 1,
 		title: "Main VSL Delay",
@@ -49,22 +49,48 @@ const pagesTest = [
 		tag2: "página 2",
 		tag3: "xyz",
 	},
-];
+]; */
+
+const currentPages = [];
 
 const Pages = () => {
-	const [pages, setPages] = useState(pagesTest);
+	const [pages, setPages] = useState(currentPages);
 	const [folders, setfolders] = useState(foldersTest);
 	const [modalOpen, setModalOpen] = useState(false);
 
-	function handleCreatePage() {
-		console.log("criei página");
-	}
+	// Criação de Novas Páginas
+	const [pageTitle, setPageTitle] = useState("");
+	const [projectName, setProjectName] = useState("");
+	const [tag1, setTag1] = useState("");
+	const [tag2, setTag2] = useState("");
+	const [tag3, setTag3] = useState("");
+	const [createdPage, setCreatedPage] = useState({
+		id: null,
+		title: "",
+		project: "",
+		tag1: "",
+		tag2: "",
+		tag3: "",
+	});
+
+	const handleCreatePage = (e) => {
+		e.preventDefault();
+
+		const newPage = {
+			id: Date.now(),
+			title: pageTitle,
+			project: projectName,
+			tag1,
+			tag2,
+			tag3,
+		};
+
+		setCreatedPage(newPage);
+		currentPages.push(newPage);
+	};
 
 	/* Apagar Páginas] */
-
 	function deletePage(pageToDelete) {
-		//imutabilidade -> as variáveis não sofrem mutação -> nao alterar valor de var na memoria -> criamos um novo valor (novo espaço na memoria)
-
 		const pagesWithoutDeletedOne = pages.filter((page) => {
 			return page.id !== pageToDelete;
 		});
@@ -73,10 +99,7 @@ const Pages = () => {
 	}
 
 	/* Apagar Pastas */
-
 	function deleteFolder(foldersToDelete) {
-		//imutabilidade -> as variáveis não sofrem mutação -> nao alterar valor de var na memoria -> criamos um novo valor (novo espaço na memoria)
-
 		const foldersWithoutDeletedOne = folders.filter((folders) => {
 			return folders.id !== foldersToDelete;
 		});
@@ -92,8 +115,23 @@ const Pages = () => {
 
 	return (
 		<section className="flex flex-col flex-1 h-screen">
-			<Modal modalOpen={modalOpen}>
-				<FormCreatePage />
+			<Modal
+				modalOpen={modalOpen}
+				onModalOpen={handleModalOpen}
+			>
+				<FormCreatePage
+					handleCreatePage={handleCreatePage}
+					pageTitle={pageTitle}
+					setPageTitle={setPageTitle}
+					projectName={projectName}
+					setProjectName={setProjectName}
+					tag1={tag1}
+					setTag1={setTag1}
+					tag2={tag2}
+					setTag2={setTag2}
+					tag3={tag3}
+					setTag3={setTag3}
+				/>
 			</Modal>
 			<div className="flex justify-between h-40 px-10 py-4 mb-4 border-b-2 border-gray-300 shadow-md ">
 				<div>
@@ -109,14 +147,9 @@ const Pages = () => {
 				</div>
 
 				<div className="flex flex-col justify-center gap-5 p-1">
-					<BtnGradient
-						itemRoute="/paginas/nova-pagina"
-						clickEvent={handleModalOpen}
-					>
-						Criar página
-					</BtnGradient>
+					<BtnGradient clickEvent={handleModalOpen}>Criar página</BtnGradient>
 
-					<BtnOutline itemRoute="/paginas/nova-pasta">Criar pasta</BtnOutline>
+					<BtnOutline>Criar pasta</BtnOutline>
 				</div>
 			</div>
 			<h2 className="px-10 my-2 font-bold text-transparent lg:text-2xl bg-clip-text bg-gradient-to-r from-startCold ">

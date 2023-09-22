@@ -40,7 +40,7 @@ const MyCard = ({ children, cardData, infoType, bgGradient }) => {
 					<h3
 						className={`${
 							bgGradient ? "text-white" : "text-startCold"
-						} text-3xl font-bold text-white blue-600 md:text-5xl`}
+						} text-3xl font-bold md:text-5xl`}
 					>
 						{cardData}
 					</h3>

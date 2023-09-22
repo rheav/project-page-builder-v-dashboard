@@ -19,7 +19,7 @@ function FolderCard({ children, niche, folderId, onDeleteFolder }) {
 				<div>
 					<span
 						onClick={handleDeleteFolder}
-						className="flex flex-row p-1 text-xl transition-colors duration-300 ease-linear border border-gray-300 rounded-full cursor-pointer hover:bg-orange-300/30"
+						className="flex flex-row p-1 text-xl transition-colors duration-300 ease-linear border border-gray-300 rounded-full cursor-pointer hover:bg-red-300"
 					>
 						<RxTrash />
 					</span>
