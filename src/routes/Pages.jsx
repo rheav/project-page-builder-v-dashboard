@@ -3,6 +3,8 @@ import BtnGradient from "../components/BtnGradient";
 import BtnOutline from "../components/BtnOutline";
 import PageCard from "../components/PageCard";
 import FolderCard from "../components/FolderCard";
+import Modal from "../components/Modal";
+import FormCreatePage from "../formComponents/FormCreatePage";
 
 const foldersTest = [
 	{
@@ -28,7 +30,7 @@ const pagesTest = [
 		title: "Main VSL Delay",
 		project: "Projeto A",
 		tag1: "VSL",
-		tag2: "página principal",
+		tag2: "página 1",
 		tag3: "abcdef",
 	},
 	{
@@ -36,7 +38,7 @@ const pagesTest = [
 		title: "Upsell 3",
 		project: "Projeto B",
 		tag1: "VSL",
-		tag2: "página principal",
+		tag2: "página 3",
 		tag3: "teste",
 	},
 	{
@@ -52,10 +54,13 @@ const pagesTest = [
 const Pages = () => {
 	const [pages, setPages] = useState(pagesTest);
 	const [folders, setfolders] = useState(foldersTest);
+	const [modalOpen, setModalOpen] = useState(false);
 
 	function handleCreatePage() {
 		console.log("criei página");
 	}
+
+	/* Apagar Páginas] */
 
 	function deletePage(pageToDelete) {
 		//imutabilidade -> as variáveis não sofrem mutação -> nao alterar valor de var na memoria -> criamos um novo valor (novo espaço na memoria)
@@ -67,6 +72,8 @@ const Pages = () => {
 		setPages(pagesWithoutDeletedOne);
 	}
 
+	/* Apagar Pastas */
+
 	function deleteFolder(foldersToDelete) {
 		//imutabilidade -> as variáveis não sofrem mutação -> nao alterar valor de var na memoria -> criamos um novo valor (novo espaço na memoria)
 
@@ -77,11 +84,20 @@ const Pages = () => {
 		setfolders(foldersWithoutDeletedOne);
 	}
 
+	/* Controlar estado do Modal */
+	function handleModalOpen() {
+		setModalOpen(!modalOpen);
+		console.log(modalOpen);
+	}
+
 	return (
 		<section className="flex flex-col flex-1 h-screen">
-			<div className="flex justify-between h-40 px-10 border-b-2 border-gray-300 shadow-md">
+			<Modal modalOpen={modalOpen}>
+				<FormCreatePage />
+			</Modal>
+			<div className="flex justify-between h-40 px-10 py-4 mb-4 border-b-2 border-gray-300 shadow-md ">
 				<div>
-					<h2 className="py-5 font-bold text-transparent lg:text-4xl bg-clip-text bg-gradient-to-r from-startCold to-endCold">
+					<h2 className="mb-4 text-2xl font-bold text-transparent lg:text-4xl bg-clip-text bg-gradient-to-r from-startCold to-endCold">
 						Páginas & Pastas
 					</h2>
 					<input
@@ -92,10 +108,10 @@ const Pages = () => {
 					/>
 				</div>
 
-				<div className="flex flex-col justify-center gap-5 p-2">
+				<div className="flex flex-col justify-center gap-5 p-1">
 					<BtnGradient
 						itemRoute="/paginas/nova-pagina"
-						clickEvent={handleCreatePage}
+						clickEvent={handleModalOpen}
 					>
 						Criar página
 					</BtnGradient>
@@ -106,7 +122,7 @@ const Pages = () => {
 			<h2 className="px-10 my-2 font-bold text-transparent lg:text-2xl bg-clip-text bg-gradient-to-r from-startCold ">
 				Pastas
 			</h2>
-			<div className="flex w-full gap-5 px-10 py-5">
+			<div className="flex flex-wrap w-1/2 gap-5 px-10 py-5 lg:w-full ">
 				{folders.length > 0 ? (
 					<>
 						{folders.map((folder) => {
@@ -131,7 +147,7 @@ const Pages = () => {
 			<h2 className="px-10 my-2 font-bold text-transparent lg:text-2xl bg-clip-text bg-gradient-to-r from-startCold">
 				Páginas
 			</h2>
-			<div className="flex w-full gap-5 px-10 py-5">
+			<div className="flex flex-wrap w-1/2 gap-5 px-10 py-5 lg:w-full ">
 				{pages.length > 0 ? (
 					<>
 						{pages.map((page) => {

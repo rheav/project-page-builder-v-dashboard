@@ -6,7 +6,7 @@ function PageCard({ children, projectName, tag1, tag2, tag3, pageId, onDeletePag
 	}
 
 	return (
-		<div className="max-w-sm overflow-hidden transition-all duration-300 border border-gray-300 rounded shadow-md hover:shadow-lg hover:-translate-y-2">
+		<div className="max-w-xs overflow-hidden transition-all duration-300 border border-gray-200 rounded-md shadow-md hover:shadow-lg hover:-translate-y-2">
 			<img
 				className="w-full"
 				src="https://v1.tailwindcss.com/img/card-top.jpg"
