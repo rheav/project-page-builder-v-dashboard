@@ -55,7 +55,7 @@ function Sidebar() {
 		<div
 			className={` ${
 				openState ? "w-44" : "w-16"
-			} h-full m-0 py-3 px-1 flex flex-col  border-r border-slate-300 bg-gradient-to-b from-startCold to-endCold relative duration-200 ease-linear z-10`}
+			} h-full m-0 py-3 px-1 flex flex-col grow border-r border-slate-300 bg-gradient-to-b from-startCold to-endCold relative duration-200 ease-linear z-10`}
 		>
 			<button
 				onClick={handleToggleSidebar}

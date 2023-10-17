@@ -136,7 +136,7 @@ const Pages = () => {
 					onModalOpen={handleModalOpen}
 				/>
 			</Modal>
-			<div className="flex justify-between px-6 py-4 mb-4 border-b-2 border-gray-300 shadow-md h-30 ">
+			<div className="flex justify-between px-6 py-4 mb-2 border-b border-endCold h-30 ">
 				<div>
 					<h2 className="mb-4 text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-startCold to-endCold">
 						Páginas & Pastas
@@ -149,7 +149,7 @@ const Pages = () => {
 					/>
 				</div>
 
-				<div className="flex flex-col justify-center gap-5 p-1">
+				<div className="flex flex-col justify-center gap-3 p-1">
 					<BtnGradient clickEvent={handleModalOpen}>Criar página</BtnGradient>
 
 					<BtnOutline>Criar pasta</BtnOutline>

@@ -3,7 +3,7 @@ import Sidebar from "./blocks/Sidebar";
 
 function App() {
 	return (
-		<main className="flex h-screen overflow-hidden">
+		<main className="flex h-screen">
 			<Sidebar />
 			<Layout />
 		</main>
