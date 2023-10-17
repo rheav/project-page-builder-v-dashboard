@@ -18,7 +18,14 @@ const MyCard = ({ children, cardData, infoType, bgGradient }) => {
 							} relative inline-block mb-0 text-2xl font-light text-transparent lowercase xl:text-lg font-md`}
 						>
 							{/* Título */}
-							{children} <LiveDataDot />
+							{children}{" "}
+							<LiveDataDot
+								bgPulse={
+									bgGradient
+										? "bg-yellow-300 animate-pulseLiveYLW"
+										: "bg-green-500 animate-pulseLiveGRN"
+								}
+							/>
 						</h2>
 					</div>
 					{/* subtítulo */}

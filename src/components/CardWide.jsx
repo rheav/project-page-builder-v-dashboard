@@ -2,14 +2,21 @@ import LiveDataDot from "../assists/LiveDataDot";
 import LineGraph from "../assists/LineGraph";
 import Table from "./Table";
 
-const CardWide = ({ children, infoType, cardData }) => {
+const CardWide = ({ children, infoType, cardData, bgGradient }) => {
 	return (
 		<div className="w-full h-full col-span-3 overflow-hidden transition bg-white border border-gray-300 shadow-md rounded-xl">
 			<div className="px-8 py-4">
 				<div className="whitespace-nowrap">
 					<h2 className="relative inline-block mb-0 text-2xl font-bold text-transparent lowercase xl:text-xl font-md bg-clip-text bg-gradient-to-r from-startCold to-endCold">
 						{/* Título */}
-						{children} <LiveDataDot />
+						{children}{" "}
+						<LiveDataDot
+							bgPulse={
+								bgGradient
+									? "bg-yellow-300 animate-pulseLiveYLW"
+									: "bg-green-500 animate-pulseLiveGRN"
+							}
+						/>
 					</h2>
 				</div>
 				{/* subtítulo */}

@@ -99,11 +99,17 @@ export default {
 			},
 
 			animation: {
-				pulseLive: "pulseLive 1.5s infinite",
+				pulseLiveGRN: "pulseLiveGRN 1.5s infinite",
+				pulseLiveYLW: "pulseLiveYLW 1.5s infinite",
 			},
 			keyframes: {
-				pulseLive: {
+				pulseLiveGRN: {
 					"0%": { boxShadow: "0 0 0 0 rgba(74, 222, 128,0.5)" },
+					"70%": { boxShadow: "0 0 0 10px rgba(74, 222, 128,0)" },
+					"100%": { boxShadow: "0 0 0 0 rgba(74, 222, 128,0)" },
+				},
+				pulseLiveYLW: {
+					"0%": { boxShadow: "0 0 0 0 rgba(255, 225, 100,0.5)" },
 					"70%": { boxShadow: "0 0 0 10px rgba(74, 222, 128,0)" },
 					"100%": { boxShadow: "0 0 0 0 rgba(74, 222, 128,0)" },
 				},
