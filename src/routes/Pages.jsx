@@ -87,6 +87,7 @@ const Pages = () => {
 
 		setCreatedPage(newPage);
 		currentPages.push(newPage);
+		handleModalOpen();
 	};
 
 	/* Apagar Páginas] */
@@ -131,18 +132,20 @@ const Pages = () => {
 					setTag2={setTag2}
 					tag3={tag3}
 					setTag3={setTag3}
+					modalOpen={modalOpen}
+					onModalOpen={handleModalOpen}
 				/>
 			</Modal>
-			<div className="flex justify-between h-40 px-6 py-4 mb-4 border-b-2 border-gray-300 shadow-md ">
+			<div className="flex justify-between px-6 py-4 mb-4 border-b-2 border-gray-300 shadow-md h-30 ">
 				<div>
-					<h2 className="mb-4 text-2xl font-bold text-transparent lg:text-4xl bg-clip-text bg-gradient-to-r from-startCold to-endCold">
+					<h2 className="mb-4 text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-startCold to-endCold">
 						Páginas & Pastas
 					</h2>
 					<input
 						type="text"
 						name="name"
 						placeholder="busque sua página"
-						className="p-2 placeholder-blue-300 border border-gray-300 rounded-md focus:border-blue-500"
+						className="px-2 py-1 placeholder-blue-300 border border-gray-300 rounded-md placeholder:text-xs focus:border-blue-500"
 					/>
 				</div>
 
@@ -152,7 +155,7 @@ const Pages = () => {
 					<BtnOutline>Criar pasta</BtnOutline>
 				</div>
 			</div>
-			<h2 className="px-6 my-2 font-bold text-transparent lg:text-2xl bg-clip-text bg-gradient-to-r from-startCold ">
+			<h2 className="px-6 my-1 text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-startCold">
 				Pastas
 			</h2>
 			<div className="flex flex-wrap w-1/2 gap-5 px-6 py-5 lg:w-full ">
@@ -173,11 +176,13 @@ const Pages = () => {
 					</>
 				) : (
 					<>
-						<h2 className="text-xl font-bold">Criar nova pasta</h2>
+						<h2 className="text-lg font-bold duration-300 cursor-pointer hover:text-endCold">
+							▶️ Criar nova pasta
+						</h2>
 					</>
 				)}
 			</div>
-			<h2 className="px-6 my-2 font-bold text-transparent lg:text-2xl bg-clip-text bg-gradient-to-r from-startCold">
+			<h2 className="px-6 my-1 text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-startCold">
 				Páginas
 			</h2>
 			<div className="flex flex-wrap w-1/2 gap-5 px-6 py-5 lg:w-full ">
@@ -201,7 +206,12 @@ const Pages = () => {
 					</>
 				) : (
 					<>
-						<h2 className="text-xl font-bold">Criar nova página</h2>
+						<h2
+							onClick={handleModalOpen}
+							className="text-lg font-bold duration-300 cursor-pointer hover:text-endCold"
+						>
+							▶️ Criar nova página
+						</h2>
 					</>
 				)}
 			</div>

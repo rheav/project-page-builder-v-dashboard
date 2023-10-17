@@ -47,12 +47,6 @@ const Overview = () => {
 				>
 					Páginas mais visitadas
 				</CardWide>
-				<Card
-					cardData="99.6%"
-					infoType="médio"
-				>
-					upTime
-				</Card>
 			</div>
 		</section>
 	);

@@ -5,7 +5,7 @@ const MyCard = ({ children, cardData, infoType, bgGradient }) => {
 		<div
 			className={`${
 				bgGradient ? "bg-gradient-to-r from-startCold to-endCold" : "bg-white"
-			} relative w-full overflow-hidden transition border border-gray-300 shadow-md rounded-xl `}
+			} relative w-full overflow-hidden transition border border-gray-300 shadow-md rounded-xl`}
 		>
 			<div className="px-8 py-2 lg:py-4 lg:px-4">
 				<div className="my-1">

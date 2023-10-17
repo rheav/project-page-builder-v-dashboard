@@ -38,9 +38,11 @@ const dataFormatter = (number) => `${Intl.NumberFormat("us").format(number).toSt
 const LineGraph = () => {
 	return (
 		<Card>
-			<h2 className="text-2xl text-transparent font-bold bg-clip-text bg-gradient-to-r from-startCold to-endCold lowercase">Top #3 Páginas</h2>
+			<h2 className="text-xl font-bold text-transparent lowercase bg-clip-text bg-gradient-to-r from-startCold to-endCold">
+				Top #3 Páginas
+			</h2>
 			<LineChart
-				className="max-h-40"
+				className=" max-h-40"
 				data={chartdata}
 				index="mês"
 				categories={["Método PlayMais", "Pacote Photoshop Plus", "Vendas Atômicas"]}

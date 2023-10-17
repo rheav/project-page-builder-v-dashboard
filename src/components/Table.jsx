@@ -8,7 +8,7 @@ const Table = ({ cardData }) => {
 					<th className="font-light rounded-tr-lg">Acessos</th>
 				</tr>
 			</thead>
-			<tbody>
+			<tbody className="">
 				{cardData.map((item, index) => (
 					<tr
 						key={index}
@@ -28,9 +28,7 @@ const Table = ({ cardData }) => {
 						</td>
 
 						{/* Acessos */}
-						<td className="py-2 text-center text-gray-600 lg:text-sm last:rounded-bl-lg last:rounded-br-lg">
-							{item.pageAcessos}
-						</td>
+						<td className="py-2 text-center text-gray-600 lg:text-sm ">{item.pageAcessos}</td>
 					</tr>
 				))}
 			</tbody>
