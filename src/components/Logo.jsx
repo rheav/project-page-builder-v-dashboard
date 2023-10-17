@@ -4,7 +4,7 @@ function Logo({ isOpen }) {
 			{isOpen ? (
 				<svg
 					id="logo-87"
-					width="120"
+					width="100"
 					height="30"
 					viewBox="0 0 202 40"
 					fill="none"
@@ -86,7 +86,7 @@ function Logo({ isOpen }) {
 			) : (
 				<svg
 					id="logo-86"
-					width="30"
+					width="25"
 					height="30"
 					viewBox="0 0 40 40"
 					fill="none"

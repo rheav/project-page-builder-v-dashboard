@@ -21,6 +21,7 @@ function Sidebar() {
 	const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 	const [openState, setOpenState] = useState(true);
 	const [page, setPage] = useState("Visão Geral");
+	const breakpoint = 900;
 
 	function handleSetPage() {
 		setPage();
@@ -28,7 +29,6 @@ function Sidebar() {
 
 	function handleToggleSidebar() {
 		const width = window.innerWidth;
-		const breakpoint = 768;
 		width < breakpoint ? setOpenState(false) : setOpenState(!openState);
 	}
 
@@ -37,7 +37,7 @@ function Sidebar() {
 			const newScreenWidth = window.innerWidth;
 			setScreenWidth(newScreenWidth);
 
-			if (newScreenWidth < 768) {
+			if (newScreenWidth < breakpoint) {
 				setOpenState(false);
 			} else {
 				setOpenState(true);
@@ -54,8 +54,8 @@ function Sidebar() {
 	return (
 		<div
 			className={` ${
-				openState ? "w-52 lg:w-72" : "w-16 lg:w-24"
-			} h-screen m-0 py-3 px-1 flex flex-col items-center border-r border-slate-300 bg-gradient-to-b from-startCold to-endCold relative duration-200 ease-linear  z-10`}
+				openState ? "w-44" : "w-16"
+			} h-full m-0 py-3 px-1 flex flex-col  border-r border-slate-300 bg-gradient-to-b from-startCold to-endCold relative duration-200 ease-linear z-10`}
 		>
 			<button
 				onClick={handleToggleSidebar}

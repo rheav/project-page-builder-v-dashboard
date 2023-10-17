@@ -133,7 +133,7 @@ const Pages = () => {
 					setTag3={setTag3}
 				/>
 			</Modal>
-			<div className="flex justify-between h-40 px-10 py-4 mb-4 border-b-2 border-gray-300 shadow-md ">
+			<div className="flex justify-between h-40 px-6 py-4 mb-4 border-b-2 border-gray-300 shadow-md ">
 				<div>
 					<h2 className="mb-4 text-2xl font-bold text-transparent lg:text-4xl bg-clip-text bg-gradient-to-r from-startCold to-endCold">
 						Páginas & Pastas
@@ -152,10 +152,10 @@ const Pages = () => {
 					<BtnOutline>Criar pasta</BtnOutline>
 				</div>
 			</div>
-			<h2 className="px-10 my-2 font-bold text-transparent lg:text-2xl bg-clip-text bg-gradient-to-r from-startCold ">
+			<h2 className="px-6 my-2 font-bold text-transparent lg:text-2xl bg-clip-text bg-gradient-to-r from-startCold ">
 				Pastas
 			</h2>
-			<div className="flex flex-wrap w-1/2 gap-5 px-10 py-5 lg:w-full ">
+			<div className="flex flex-wrap w-1/2 gap-5 px-6 py-5 lg:w-full ">
 				{folders.length > 0 ? (
 					<>
 						{folders.map((folder) => {
@@ -177,10 +177,10 @@ const Pages = () => {
 					</>
 				)}
 			</div>
-			<h2 className="px-10 my-2 font-bold text-transparent lg:text-2xl bg-clip-text bg-gradient-to-r from-startCold">
+			<h2 className="px-6 my-2 font-bold text-transparent lg:text-2xl bg-clip-text bg-gradient-to-r from-startCold">
 				Páginas
 			</h2>
-			<div className="flex flex-wrap w-1/2 gap-5 px-10 py-5 lg:w-full ">
+			<div className="flex flex-wrap w-1/2 gap-5 px-6 py-5 lg:w-full ">
 				{pages.length > 0 ? (
 					<>
 						{pages.map((page) => {

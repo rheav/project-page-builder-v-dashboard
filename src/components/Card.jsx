@@ -15,20 +15,16 @@ const MyCard = ({ children, cardData, infoType, bgGradient }) => {
 								bgGradient
 									? "text-white"
 									: "text-transparent bg-clip-text bg-gradient-to-r from-startCold to-endCold"
-							} relative inline-block mb-0 text-2xl font-bold text-transparentlowercase xl:text-2xl 2xl:text-3xl font-md`}
+							} relative inline-block mb-0 text-2xl font-light text-transparent lowercase xl:text-lg font-md`}
 						>
 							{/* Título */}
 							{children} <LiveDataDot />
 						</h2>
 					</div>
 					{/* subtítulo */}
-					<div className="mb-1 lg:mb-4">
+					<div className="mb-1 lg:mb-2">
 						{infoType ? (
-							<h3
-								className={`${
-									bgGradient ? "text-white" : "text-gray-400"
-								} font-lighttext-md lg:text-xl`}
-							>
+							<h3 className={`${bgGradient ? "text-white" : "text-gray-400"} font-light text-xs`}>
 								{infoType}
 							</h3>
 						) : (
@@ -37,11 +33,7 @@ const MyCard = ({ children, cardData, infoType, bgGradient }) => {
 					</div>
 
 					{/* Valor numérico */}
-					<h3
-						className={`${
-							bgGradient ? "text-white" : "text-startCold"
-						} text-3xl font-bold md:text-5xl`}
-					>
+					<h3 className={`${bgGradient ? "text-white" : "text-startCold"} text-2xl font-bold`}>
 						{cardData}
 					</h3>
 				</div>
